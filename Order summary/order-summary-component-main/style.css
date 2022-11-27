@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700;900&display=swap');
+
+:root{
+  --pb-:hsl(225, 100%, 94%);
+  --bb-:hsl(245, 75%, 52%);
+  --Very_pale_blue: hsl(225, 100%, 98%);
+  --Desaturated_blue: hsl(224, 23%, 55%);
+  --Dark_blue: hsl(223, 47%, 23%);
+}
+
+*{
+  margin: 0;padding: 0;
+  font-family: 'Red Hat Display', sans-serif;
+}
+body{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: url(images/pattern-background-desktop.svg) no-repeat;
+  background-color: var(--pb-);
+  background-position: center;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+  padding: 150px 0 0;
+  
+}
+
+.order-card{
+  max-width: 420px;
+  background: #fff;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.order-card .card .card-img img{
+  width: 420px;
+  border-radius: 15px 15px 0 0;
+}
+
+.order-card .card .card-text{
+  display: flex;
+  flex-direction: column;
+  padding: 25px 15px;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.order-card .card-text h2{
+  color: var(--Dark_blue);
+  padding: 0 0 15px;
+  font-size: 2rem;
+}
+
+.order-card .card .card-text p{
+  padding: 0 0 10px;
+  color: var(--Desaturated_blue);
+}
+
+.card-text .summary{
+  margin: 0 25px;
+  font-size: 1rem;
+}
+.card-text .card-plan{
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--Very_pale_blue);
+  border-radius: 10px;
+  align-items: center;
+  width: 85%;
+}
+
+
+.card-plan img{
+  width: 35px;
+  margin: 0 8px 0 15px;
+}
+
+.card-text p{
+  color: var(--pb-);
+  font-weight: 600;
+}
+
+.card-text .card-plan p{
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 40%;
+  margin: 5px 0 0 -65px;
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+.card-plan a{
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--bb-);
+  font-weight: 900;
+  margin: 0 7px;
+  transition: 0.2s;
+}
+
+.card-plan a:hover{
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.card-plan p .annual{
+  color: var(--Dark_blue);
+  font-size: 1rem;
+}
+.card-text .card-plan:hover{
+  padding: 10px 5px;
+}
+
+.card .card-text .card-btn{
+  background: var(--bb-);
+  border-radius: 10px;
+  margin: 15px 0;
+  width: 80%;
+  height: 40px;
+  color: #fff;
+  font-weight: 900;
+}
+
+.card-btn:hover{
+  letter-spacing: .04rem;
+}
+
+.card-text .card-order{
+  font-weight: 600;
+  font-size: 1rem;
+  
+}
+
+.card-order:hover{
+  letter-spacing: .03rem;
+}
+
+.order-card:hover{
+  margin: -15px 10px;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }

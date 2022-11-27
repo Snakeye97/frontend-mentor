@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root{
+  --main-bg:hsl(217, 54%, 11%);
+  --card-bg:hsl(216, 50%, 16%);
+  --line:hsl(215, 32%, 27%);
+  --w:hsl(0, 0%, 100%);
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%)
+
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+/* background */
+body{
+  background: var(--main-bg);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+}
+
+/* container */
+
+main{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card{
+  background: var(--card-bg);
+  width: 25%;
+  height: 560px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  text-align: center;
+  padding: 16px 10px;
+
+}
+
+.card .main-img img{
+  width: 300px;
+  border-radius: 10px;
+}
+.card-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 0 15px;
+}
+
+.card-text h2{
+  color: var(--w);
+  padding: 10px 0  20px;
+  text-align: left;
+}
+
+.card-text p{
+  color: var(--Soft-blue);
+  padding: 10px 0 15px;
+  text-align: left;
+}
+
+.card-text p .card-eth{
+  color: var(--Cyan);
+}
+
+
+.card-text .card-span{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0 15px;
+}
+.card-text .card-span span{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.card-text .card-span span img{
+  padding: 0 3px;
+}
+.card-line{
+  display: flex;
+  align-items: center;
+  background: var(--line);
+  width: 300px;
+  height: 1px;
+  margin: 0 5px ;
+}
+.card-avatar{
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.card-avatar img{
+  width: 40px;
+}
+
+@media (max-width:450px){
+
+  body{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: center;
+  }
+
+  .card{
+    height: 425px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-text{
+    font-size: .8rem;
+    align-items: center;
+  }
+
+  .card-text p{
+    text-align: left;
+    display: flex;
+  }
+
+  .card-line{
+    width: 180px;
+  }
+
+  .card .main-img img{
+    width: 170px;
+  }
+
+  .card-span .card-span span{
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+  .card-avatar{
+    padding: 10px 0;
+  }
+  .card-avatar p{
+    padding: 0 .8rem;
+  }
+
+}

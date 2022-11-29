@@ -68,12 +68,14 @@ h2{
   background-color: var(--Strong-Cyan);
   box-shadow: var(--Strong-Cyan) 2PX 2PX;
   border: none;
+  box-shadow: 2px 3px 5px var(--Strong-Cyan);
 }
 .mac{
   color: #fff;
   background-color: var(--Light-Blue);
   box-shadow: var(--Light-Blue) 2px 2px;
   border: none;
+  box-shadow: 2px 3px 5px var(--Light-Blue);
 }
 
 /* section-2 */
@@ -191,6 +193,7 @@ h2{
   h2{
     padding: 0 0 0 ;
   }
+
   .sec-2{
     padding: 95px 0;
   }
@@ -242,5 +245,26 @@ h2{
     padding: 10px 15px ;
     display: flex;
     flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 1200px){
+
+  p{
+    padding: 0 30px;
+  }
+  .sec-1{
+    height: 600px;
+  }
+  .sec-2 .row{
+    display: flex;
+    flex-direction: column;
+  }
+  .sec-2 .col-1 img{
+    margin: 0 550px 0 0;
+  }
+  .sec-3 img{
+    width: 650px;
+    padding: 25px 0 25px;
   }
 }

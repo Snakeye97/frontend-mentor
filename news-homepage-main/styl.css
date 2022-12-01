@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+:root{
+  /* primary colors */
+  --Soft-orange: hsl(35, 77%, 62%);
+  --Soft-red: hsl(5, 85%, 63%);
+  /* neutral colors */
+  --Off-white: hsl(36, 100%, 99%);
+  --Grayish-blue: hsl(233, 8%, 79%);
+  --Dark-grayish-blue: hsl(236, 13%, 42%);
+  --Very-dark-blue: hsl(240, 100%, 5%);
+
+}
+*{
+  margin: 0;padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body{
+  background-color: var(--Off-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 50px 0 0;
+}
+
+/* header */
+header{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 0;
+  width: 100%;
+}
+header img{
+  padding: 0 60px;
+}
+
+header nav{
+  padding: 0 80px;
+}
+
+header nav a{
+  text-decoration: none;
+  padding: 0 25px;
+  color: var(--Very-dark-blue);
+  font-weight: 700;
+}
+header nav a:hover{
+  color: var(--Grayish-blue);
+  letter-spacing: .1rem;
+}
+#menu-btn,
+#menu-close{
+display: none;
+}
+/* header */
+/* main */
+.home-new{
+  display: flex;
+
+}
+.home img{
+  width: 800px;
+  padding: 0 0 0 70px;
+}
+img:hover{
+  transform: scale(1.1);
+}
+.home-text{
+  display: flex;
+  padding: 25px 50px 0 70px;
+  width: 60%;
+}
+
+.home-text h1{
+  font-size: 2.6rem;
+}
+.home-text p{
+  color: var(--Dark-grayish-blue);
+  font-size: 1rem;
+  padding: 15px 20px 0 10px;
+  font-weight: 400;
+}
+.text-p .btn{
+  text-decoration: none;
+  background-color: var(--Soft-red);
+  border: none;
+  margin: 15px 8px;
+  width: 150px;
+  height: 45px;
+  color: var(--Off-white);
+  font-weight: 600;
+}
+
+.btn:hover{
+  transform: scale(1.1);
+  letter-spacing: .1rem;
+}
+.new{
+  color: #fff;
+  background-color: var(--Very-dark-blue);
+  width: 350px;
+  height: 360px;
+  margin: 0 20px 0 -450px;
+  padding: 25px 15px;
+}
+.new:hover{
+  transform: scale(1.1);
+}
+.new h1{
+  color: var(--Soft-orange);
+  font-size: 2rem;
+  padding: 0 0 18px;
+}
+.new h2{
+  font-size: 1.4rem;
+  padding: 5px 0;
+}
+.new h2:hover{
+  color: var(--Grayish-blue);
+}
+.new p{
+  font-size: .9rem;
+  color: var(--Grayish-blue);
+  padding: 15px 0;
+}
+.line{
+  background-color: var(--Dark-grayish-blue);
+  width: 350px;
+  height: 1px;
+
+}
+
+#popular .popular-col{
+  display: flex;
+  padding: 25px 70px;
+}
+.popular-col img{
+  width: 110px;
+  height: 140px;
+}
+.retro,
+.laptop,
+.gaming{
+  display: flex;
+}
+.col-text{
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+}
+.col-text h2{
+  color: var(--Grayish-blue);
+  padding: 10px 0;
+}
+.col-text h3{
+  padding: 5px 0;
+}
+.col-text p{
+  padding: 10px 0;
+}
+
+@media only screen and (max-width: 1200px){
+
+  .home-new{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+  }
+  .new{
+    margin: 20px 50px;
+  }
+}
+
+@media only screen and (max-width: 768px){
+
+  body{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .home-new{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .home{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .home-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding: 10px 0 0 50px;
+  }
+  .home img{
+    width: 480px;
+  }
+  .home-text h1{
+    font-size: 2.2rem;
+  }
+  .new{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    padding: 10px ;
+    margin: 10px 20px;
+  }
+  .new-row{
+    text-align: left;
+    padding: 10px;
+  }
+  .line{
+    width: 320px;
+    align-items: center;
+    margin: 10px 15px;
+  }
+  .popular-col{
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0;
+    justify-content: center;
+  }
+  .popular-col img{
+    padding: 20px 10px;
+  }
+  .col-text{
+    text-align: left;
+    padding: 25px 0;
+  }
+  .col-text h2{
+    padding: 5px 0;
+  }
+  .col-text h3{
+    padding:5px 0;
+  }
+  .col-text p{
+    padding: 5px 0;
+  }
+
+}
+@media only screen and (max-width: 450px){
+  .home img{
+    width: 400px;
+  }
+  .home-new{
+    display: flex;
+    text-align: center;
+  }
+
+ .new{
+  padding: 10px 30px;
+  width: 300px;
+ }
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }

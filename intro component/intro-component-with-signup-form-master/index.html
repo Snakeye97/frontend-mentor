@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <div class="left-text">
+      <h1 class="title">Learn to code by watching others</h1>
+      <p class="subtitle">See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+        but understanding how developers think is invaluable.</p>
+    </div>
+    <div class="form-el">
+      <h2 class="form-header"><span>Try it free 7 days</span>  then $20/mo. thereafter</h2>
+      <form id="form_El">
+        <input type="text" placeholder="First Name">
+        <input type="text" placeholder="Last Name">
+        <input type="email" required placeholder="Email Address" id="email">
+        <div class="error email-error" style="display: none;">
+          <p><img src="images/icon-error.svg">Please enter valid email</p>
+        </div>
+        <input type="password" required placeholder="Password">
+        <button type="submit">CLAIM YOUR FREE TRIAL </button>
+        <p class="form-footer">By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p class="attribution" style="display: none;">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </p>
+  </footer>
+
+  <script>
+    const form = document.querySelector('#form_el');
+    const emailError = document.querySelector('.email-error');
+    const emailInput = document.querySelector('#email');
+
+    emailInput.addEventListener('input', function() {
+      /* get the value of input field */
+      const email = this.value;
+      //console.log(email);
+
+      // using regular expretion for validation of email
+      const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+      const isValidEmail = emailRegex.test(email);
+      //console.log(isValidEmail);
+
+      if(!isValidEmail){
+        emailError.style.display = 'block';
+      }else{
+        emailError.style.display = 'none';
+      }
+
+
+    })
+  </script>
+
+</body>
+</html>

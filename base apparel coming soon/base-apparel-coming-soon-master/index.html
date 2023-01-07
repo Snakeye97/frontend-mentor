@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="https://kit.fontawesome.com/94242960ae.js" crossorigin="anonymous"></script>
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <div class="container">
+
+    <div class="left">
+
+      <div class="logo">
+        <img src="images/logo.svg" alt="">
+      </div>
+
+      <div class="text">
+        <h1><span>WE'RE</span>COMING <b>SOON</b></h1>
+        <p>  Hello fellow shoppers! We're currently building our new fashion store. 
+          Add your email below to stay up-to-date with announcements and our launch deals.</p>
+
+          <div class="email">
+            <form>
+              <input type="email" id="email" name="email">
+              <img class="email-eror" src="images/icon-error.svg" alt="" style="display: none;">
+              <button type="submit"><i class="fas fa-greater-than"></i></button><br>
+              <span id="email-error" style="display: none;">Please enter a valid email address</span>
+              
+            </form>
+          </div>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="mobile">
+        <img src="images/hero-mobile.jpg" alt="">
+      </div>
+      <img src="images/hero-desktop.jpg" alt="">
+    </div>
+  </div>
+
+
+  
+  <footer>
+    <p class="attribution" style="display: none;">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </p>
+  </footer>
+  <script>
+    // Get the email input field and the error message span
+    const emailInput = document.getElementById('email');
+    const emailError = document.getElementById('email-error');
+    const errorEmail = document.querySelector('.email-eror');
+  
+    // Add an event listener to the email input field to listen for changes
+    emailInput.addEventListener('input', function() {
+      // Get the value of the email input field
+      const email = this.value;
+  
+      // Use a regular expression to validate the email
+      const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+      const isValidEmail = emailRegex.test(email);
+  
+      // If the email is not valid, show the error message
+      if (!isValidEmail) {
+        emailError.style.display = 'block';
+        errorEmail.style.display = 'inline-block';
+      } else {
+        emailError.style.display = 'none';
+        errorEmail.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+:root{
+  /* primary */
+  --Red: hsl(0, 100%, 74%); 
+  --Green: hsl(154, 59%, 51%);
+
+  /* accent */
+  --Blue: hsl(248, 32%, 49%);
+
+  /* neutral */
+  --Dark-Blue: hsl(249, 10%, 26%); 
+  --Grayish-Blue: hsl(246, 25%, 77%);
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: 'Poppins',sans-serif;
+  background: var(--Red);
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+}
+main{
+  background: url(images/bg-intro-desktop.png);
+  height: 100vh;
+  display: flex;
+  padding: 1rem;
+}
+
+/* intro texts */
+main .left-text{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 6rem;
+}
+main .left-text h1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 3.2rem;
+  font-weight: 600;
+}
+main .left-text p{
+  color: rgb(255, 244, 232);
+  font-weight: 400;
+}
+
+/* form element */
+main .form-el{
+  display: flex;
+  flex-direction: column;
+  width: 75vw;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+main .form-el h2{
+  color: var(--Grayish-Blue);
+  font-size: 0.9rem;
+  font-weight: 400;
+  background: var(--Blue);
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 3.1rem;
+  gap: 0.5rem;
+  box-shadow: 3px 3px 10px var(--Dark-Blue);
+  transition: all 300ms ease;
+  cursor: pointer;
+}
+main .form-el h2 span{
+  color: #fff;
+  font-weight: 600;
+}
+main .form-el h2:hover{
+  transform: scale(1.1);
+}
+/* form */
+main .form-el form{
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 10px;
+  gap: 1.2rem;
+}
+main .form-el form input{
+  padding: 1rem;
+  border: 2px solid var(--Dark-Blue);
+  font-weight: 600;
+  border-radius: 10px;
+}
+main .form-el form button{
+  background: var(--Green);
+  border: none;
+  border-radius: 10px;
+  padding: 1rem;
+  font-weight: 600;
+  box-shadow: 3px 3px 20px var(--Green);
+  color: rgb(213, 244, 232);
+  cursor: pointer;
+  transition: all 300ms ease;
+} 
+main .form-el form button:hover{
+  transform: scale(1.1);
+}
+main .form-el form img{
+  width: 1.2rem;
+}
+main .form-el p{
+  color: rgb(207 205 219);
+  font-size: 1rem;
+  font-weight: 500;
+}
+main .form-el p span{
+  color: var(--Red);
+  font-weight: 600;
+  cursor: pointer;
+}
+main .form-el .email-error{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .form-el .error p{
+  color: var(--Red);
+  width: 100%;
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* media queries */
+@media (max-width: 767px) {
+  main{
+    flex-direction: column;
+    align-items: center;
+  }
+  main .left-text{
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  main .left-text h1{
+    font-size: 2.2rem;
+  }
+  main .left-text p{
+    margin-top: 1rem;
+    padding: 0 1rem;
+  }
+  main .form-el{
+    padding: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+  main .form-el h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding:  0 0.7rem;
+    width: 100%;
+  }
+}
+@media (max-width: 450px){
+  main .form-el h2{
+    align-items: center;
+    justify-content: center;
+    display: inline;
+    padding: 0.9rem 0.5rem 0.5rem 0.5rem;
+  }
+}

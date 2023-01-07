@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="https://kit.fontawesome.com/94242960ae.js" crossorigin="anonymous"></script>
+  
+  <title>Frontend Mentor | Article preview component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="left">
+      <img src="images/drawers.jpg" alt="">
+    </div>
+
+    <div class="right">
+      <p>Shift the overall look and feel by adding these wonderful 
+        touches to furniture in your home</p>
+
+        <span>Ever been in a room and felt like something was missing? Perhaps 
+          it felt slightly bare and uninviting. I’ve got some simple tips 
+          to help you make any room feel complete.</span>
+
+          <div class="bottom">
+            <div class="profile">
+              <img src="images/avatar-michelle.jpg" alt="profile">
+              <h1>Michelle Appleton <b>28 Jun 2020</b></h1>
+            </div>
+
+            <div class="ss_wrap ss_wrap_1">
+              <div class="ss_btn">
+                <i class="fas fa-share"></i>
+              </div>
+
+              <div class="dd_list" style="display: none;">
+                <ul>
+                  <li>SHARE</li>
+                  <li><a href="#"><i class="fas fa-brands fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fas fa-brands fab fa-pinterest"></i></a></li>
+                  <li><a href="#"><i class="fas fa-brands fab fa-twitter"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- <div class="share">
+              <div class="share-btn">
+                <img src="images/icon-share.svg" alt="share share-button">
+              </div>
+              
+              <div class="share-icon">
+                
+                <ul>
+                  <p>SHARE</p>
+                  <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+                  <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
+                </ul>
+              </div>
+
+            </div> -->
+          </div>
+          
+
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+  <script>
+    const shareBtn = document.querySelector('.ss_btn');
+    const shareList = document.querySelector('.dd_list');
+
+    shareBtn.addEventListener('click', () => {
+      if(shareList.style.display == 'none'){
+        shareList.style.display = 'block';
+        shareBtn.style.background = 'hsl(217, 19%, 35%)';
+        shareBtn.style.color = 'hsl(210, 46%, 95%)';
+      }else{
+        shareList.style.display = 'none'
+        shareBtn.style.background = 'hsl(210, 46%, 95%)';
+        shareBtn.style.color = 'hsl(217, 19%, 35%)';
+      }
+    })
+  </script>
+</body>
+</html>

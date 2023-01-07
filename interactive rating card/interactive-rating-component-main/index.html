@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+<body>
+  <main>
+      <!-- Rating state start -->
+    <div class="rating-card" id="card-1">
+      <img src="images/icon-star.svg" alt="star">
+      <h1>How did we do?</h1>
+      <p>Please let us know how we did with your support request. All feedback is appreciated 
+        to help us improve our offering!</p>
+
+        <ul>
+          <li><button class="btn">1</button></li>
+          <li><button class="btn">2</button></li>
+          <li><button class="btn">3</button></li>
+          <li><button class="btn">4</button></li>
+          <li><button class="btn">5</button></li>
+        </ul>
+
+        
+        <button type="submit" class="btn-submit" id="submit">Submit</button>
+    </div>
+    <!-- Rating state end -->
+
+      <!-- Thank you state start -->
+    <div class="rating-card hidden" id="card-2">
+      <img src="images/illustration-thank-you.svg" alt="Thank You">
+      <p class="rating-display">You selected <b id="rating"></b>out of 5</p>
+
+  <h2>Thank you!</h2>
+
+  <p>We appreciate you taking the time to give a rating. If you ever need more support, 
+    don’t hesitate to get in touch!</p>
+
+    <button class="btn-submit" id="rate-again">Rate Again</button>
+    </div>
+      <!-- Thank you state end -->
+
+  </main>
+  
+  <div class="attribution" style="display: none;">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+  <script>
+    const mainContainer = document.querySelector('#card-1');
+    const thanksContainer = document.querySelector('#card-2');
+    const submitBtn = document.querySelector('#submit');
+    const rateAgain = document.querySelector('#rate-again');
+    const rating = document.getElementById('rating');
+    const rates = document.querySelectorAll('.btn');
+
+    submitBtn.addEventListener('click', () => {
+      thanksContainer.classList.remove ('hidden');
+      mainContainer.classList.add ('hidden');
+    })
+    rateAgain.addEventListener('click', () => {
+      thanksContainer.classList.add ('hidden');
+      mainContainer.classList.remove ('hidden');
+    })
+
+    rates.forEach((rate) => {
+      rate.addEventListener('click', () => {
+        rating.innerHTML = rate.innerHTML
+      })
+    })
+
+  </script>
+</body>
+</html>
